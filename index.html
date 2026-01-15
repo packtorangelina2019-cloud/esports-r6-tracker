@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <title>R6 LCQ Edge</title>
+  <style>
+    body{ background:black; color:#FF0000; font-family:monospace; text-align:center; padding:50px; }
+    h1{ color:#FF0000; }
+    .odds{ font-size:1.5em; margin:20px 0; }
+    .timer{ font-size:3em; color:white; }
+  </style>
+</head>
+<body>
+  <h1>Rainbow Six Siege</h1>
+  <p class="odds">Kalshi SA LCQ — Opens Jan 16 4PM EST</p>
+  <div class="timer">3:00</div>
+  <p>Beat the stream delay</p>
+  <script>
+    let sec = 180;
+    const timer = setInterval(() => {
+      sec--;
+      document.querySelector('.timer').textContent = new Date(sec*1000).toISOString().substr(14,5);
+      if(sec===0) clearInterval(timer);
+    }, 1000);
+  </script>
+</body>
+</html>
